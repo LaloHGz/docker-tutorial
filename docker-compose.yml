@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  remix-start:
+    restart: always
+    build:
+      context: .
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "3000:3000"
+
+
